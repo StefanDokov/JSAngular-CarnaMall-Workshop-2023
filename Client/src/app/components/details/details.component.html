@@ -1,0 +1,76 @@
+<div class="containerdetails">
+    <h2>Car Details</h2>
+    <p>You have clicked on a specific car offer of our park. If you have account with us you can book it for a desired amount of time, if available!</p>
+  </div>
+  <div *ngIf="!isLoad">
+    Loading...
+    </div>
+<div class="maindetailcontainer" *ngIf="isLoad">
+    <div class="detailandform">
+        <div class="item-1 colrow">
+            <a href="#"><img src="{{rent.image}}" alt="Image" class="img-fluid"></a>
+            <div class="item-1-contents">
+              <div class="text-center">
+              <h3><a href="#">{{rent.model}}</a></h3>
+              <div class="rating">
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+                <span><i class="fa-solid fa-star"></i></span>
+              </div>
+              <div class="rent-price"><span>${{rent.price}}/</span>day</div>
+              </div>
+              <ul class="specs">
+                <li>
+                  <span>Doors</span>
+                  <span class="spec">{{rent.doors}}</span>
+                </li>
+                <li>
+                  <span>Seats</span>
+                  <span class="spec">{{rent.seats}}</span>
+                </li>
+                <li>
+                  <span>Transmission</span>
+                  <span class="spec">{{rent.transmission}}</span>
+                </li>
+                <li>
+                  <span>Year</span>
+                  <span class="spec">{{rent.year}}</span>
+                </li>
+              </ul>
+              <div class="rent-action" *ngIf="isLogged">
+                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id != rent.ownerId)" (click)="isRentingClick()">Rent Now</a> 
+                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)">Edit</a>
+                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)">Delete</a>
+              </div>
+            </div>
+          </div>
+          <div class="infoandform" *ngIf="isRenting">
+            <div class="reservedbox">
+                <h2>This car has been reserved on the dates that are listed bellow:</h2>
+                
+                <p>14-06-2023 for 4 days</p>
+                <p>14-06-2023 for 4 days</p>
+                
+            </div>
+            <div class="rentoform">
+                <h2>Reserve this car</h2>
+                <form action="" [formGroup]="infoForm">
+                <label for="from">From</label>
+                <input type="text" name="form" placeholder="dd-mm-yyyy" formControlName="dateFrom">
+                <label for="for">How many days?</label>
+                <select name="for" formControlName="forDays">
+                  <option *ngFor="let option of options" [value]="option">{{option}} days</option>
+                  
+                </select>
+                <label for="card">Card Number</label>
+                <input type="text" name="card" formControlName="cardNum">
+                <label for="cost">Cost</label>
+                <input type="text" name="cost" formControlName="costPrice"  >
+                <button type="submit" (click)="postInfo()">Pay</button>
+                </form>
+            </div>
+          </div>
+    </div>
+</div>

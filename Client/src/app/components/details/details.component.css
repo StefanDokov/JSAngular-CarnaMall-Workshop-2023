@@ -1,0 +1,209 @@
+.containerdetails {
+  width: 100%;
+  height: 90vh;
+  background-image: url("/assets/images/detailsbg.jpg");
+  background-size: cover;
+  background-position: 0 -190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+}
+
+.containerdetails h2 {
+  font-size: 4em;
+  text-shadow: 2px 2px #080808;
+}
+
+.containerdetails > p {
+  width: 80%;
+  text-align: center;
+  text-shadow: 2px 2px #080808;
+}
+
+.maindetailcontainer {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5em;
+}
+
+.detailandform {
+  width: 60%;
+  min-height: 50vh;
+  display: flex;
+  gap: 2em;
+}
+
+.item-1 {
+  width: 50%;
+  height: 80%;
+}
+.item-1 img {
+  width: 100%;
+  height: auto;
+}
+
+.item-1 h3 a {
+  text-decoration: none;
+  color: rgb(128, 128, 248);
+}
+
+.item-1 i {
+  color: orange;
+}
+
+.rent-action {
+  margin: 20px 0;
+}
+
+.rent-action a {
+  padding: 10px;
+  background: rgb(235, 248, 46);
+  border-radius: 5px;
+  text-decoration: none;
+  color: blue;
+  line-height: 1;
+  
+}
+.rent-action a:hover {
+  background: salmon;
+  color: white;
+  cursor: pointer;
+  
+}
+
+.text-center {
+  text-align: center;
+}
+
+.item-1 .item-1-contents {
+  padding: 20px;
+  background: #fff;
+}
+.item-1 .item-1-contents h3 {
+  font-size: 18px;
+}
+.item-1 .item-1-contents .rent-price > span {
+  font-size: 1.7rem;
+}
+.item-1 .item-1-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item-1 .item-1-contents ul li {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #efefef;
+  display: block;
+  position: relative;
+}
+.item-1 .item-1-contents ul li .spec {
+  position: absolute;
+  right: 0;
+}
+.item-1 .item-1-contents ul li:last-child {
+  border-bottom: none;
+}
+.item-1 .item-1-contents .action {
+  margin-top: 20px;
+}
+
+.rent-action {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.infoandform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.reservedbox {
+  background: white;
+  border: 5px solid red;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.reservedbox h2 {
+  font-weight: 600;
+}
+.rentoform {
+  color: red;
+  background: bisque;
+  width: 520px;
+  height: 520px;
+  font-size: 1.4em;
+  padding: 20px;
+  border-radius: 10px;
+  background-image: url("/assets/images/detailsbg.jpg");
+  background-size: 900px;
+  font-weight: bold;
+  text-align: right;
+}
+.rentoform h2 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+}
+
+.rentoform form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.rentoform form input {
+  border-radius: 5px;
+  color: black;
+}
+.rentoform form input::placeholder {
+  color: rgb(168, 166, 166);
+  font-size: 18px;
+}
+
+.rentoform form button {
+  align-self: flex-end;
+  padding: 10px;
+  width: 100px;
+  background: white;
+  border-radius: 10px;
+}
+
+.rentoform form button:hover {
+  background: greenyellow;
+  color: white;
+}
+
+.rent-action a:nth-of-type(2) {
+  background-color: rgb(79, 187, 126);
+  color: white;
+}
+.rent-action a:nth-of-type(2):hover {
+  background-color: green;
+  color: black;
+}
+
+.rent-action a:nth-of-type(3) {
+  background-color: indianred;
+  color: white;
+}
+
+.rent-action a:nth-of-type(3):hover {
+  background-color: red;
+  color: black;
+}
+
+select {
+  width: 55%;
+  color: black;
+}
+

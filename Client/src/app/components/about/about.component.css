@@ -1,0 +1,155 @@
+
+
+.post-entry-1.person-1 {
+  text-align: center;
+}
+.post-entry-1.person-1 img {
+  width: 90px;
+  border-radius: 50%;
+  margin: 0 auto -45px auto;
+  
+}
+.post-entry-1.person-1 .post-entry-1-contents {
+  padding-top: 4rem;
+}
+
+.containerabout {
+    width: 100%;
+    height: 90vh;
+    background-image: url('/assets/images/aboutbg.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+}
+
+.containerabout h2 {
+    font-size: 4em;
+}
+
+.company {
+    width: 100%;
+    height: 55vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12em;
+}
+
+.ctext {
+    flex: 0 0 400px;
+    font-size: 1.1em;
+    padding-bottom: 60px;
+}
+
+.ctext h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.ctext p {
+    margin-bottom: 10px;
+}
+
+.cpic {
+    flex: 0 0 450px;
+}
+
+.cteam {
+    padding: 5em 0 0 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    gap: 0.5em;
+}
+
+.cteam > p:first-of-type {
+    color: rgb(102, 102, 248);
+}
+
+.cteam h3  {
+    font-size: 1.5em;
+}
+
+.cteam > p:nth-of-type(2){
+    width: 450px;
+    text-align: center;
+}
+
+.teamlister{
+    padding: 100px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.teamlister > div {
+    flex: 0 0 25%;
+}
+
+.avatarcard {
+    margin-bottom: 80px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background: #fff;
+    position: relative;
+    line-height: 1.7;
+}
+
+.avatarcard img {
+    position: absolute;
+    top: -45px;
+    left: 40%;
+}
+
+.meta {
+    color: rgb(207, 206, 206);
+}
+
+.avah {
+    font-size: 1.3em;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.post-entry-1-contents p {
+    line-height: 1.3;
+}
+
+.reversecompany {
+    width: 100%;
+    height: 55vh;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12em;
+}
+.revtext {
+    flex: 0 0 400px;
+    font-size: 1.1em;
+    padding-bottom: 60px;
+}
+
+.revtext h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+.revtext p {
+    margin-bottom: 10px;
+}
+
+.revpic {
+    flex: 0 0 450px;
+}

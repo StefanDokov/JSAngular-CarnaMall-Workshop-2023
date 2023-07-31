@@ -1,0 +1,24 @@
+<div class="containerlogin">
+    <h2>Log In</h2>
+    <p>Here you can find our log in form and go into your account. If you don't have one, you can always click on registration button and create new profile!</p>
+  </div>
+
+  <div class="loginform">
+    
+    <form class="form" [formGroup]="loginForm">
+        <h1><i class="fas fa-user-circle"></i></h1>
+        <div class="form-inner">
+            <div class="space"></div>
+     
+            <input formControlName="email"  type="email" placeholder="Email" required><br/>
+            <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px">Email is required!</small>
+            <div class="space"></div>
+            <input  formControlName="password" type="password" placeholder="Password" required><br/>
+            <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px;">Password is required!</small>
+            <button (click)="onLogin()" class="submit-btn" type="submit">Log in</button>
+            <button class="account-btn" routerLink="/register" type="button">Create Account</button>
+        </div>
+
+     
+      </form>
+  </div>

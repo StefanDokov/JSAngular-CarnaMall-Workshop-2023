@@ -1,0 +1,131 @@
+.containercontact {
+  width: 100%;
+  height: 90vh;
+  background-image: url("/assets/images/contactbg.jpg");
+  background-size: cover;
+  background-position: 0 -250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2em;
+}
+
+.containercontact h2 {
+  font-size: 4em;
+  text-shadow: 2px 2px #080808;
+}
+
+.containercontact > p {
+    width: 80%;
+    text-align: center;
+    text-shadow: 2px 2px #080808;
+}
+
+.contactelements {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4em 0 5em 0;
+  gap: 1em;
+}
+.contactelements h2 {
+    font-size: 2em;
+}
+
+.contactelements > p {
+    font-size: 1.2em;
+    margin-bottom: 50px;
+}
+
+.formandside {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+}
+
+.formstructure {
+    flex: 0 0 40%;
+}
+.formstructure form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+.formstructure input {
+    padding: 10px;
+}
+
+.form-group:last-of-type input {
+    background: rgb(204, 224, 86);
+    width: 250px;
+    color: white;
+    border-radius: 5px;
+}
+.form-group:last-of-type input:hover{
+  background: indianred;
+  cursor: pointer;
+}
+
+.form-group {
+    flex: 0 0 100%;
+}
+.form-group textarea {
+    width: 100%;
+}
+
+.form-group:first-of-type {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group:first-of-type div {
+    flex: 0 0 49%;
+}
+
+
+
+.form-group input {
+    width: 100%;
+}
+
+.locationinfo {
+    align-self: flex-start;
+    flex: 0 0 15%;
+    height: 360px;
+}
+
+.locationinfo div {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.locationinfo h3 {
+    font-size: 1.5em;
+}
+
+.locationinfo div > * {
+    display: block;
+    padding: 18px;
+}
+.mapinfo {
+    flex: 0 0 15%;
+    background: #fff;
+    align-self: flex-start;
+}
+
+.list-unstyled li > * {
+    display: block;
+    padding: 5px;
+}
+
+.list-unstyled li span:first-of-type {
+    font-size: 1.2em;
+}

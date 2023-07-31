@@ -1,0 +1,331 @@
+.mainscreen {
+  height: 100vh;
+  width: 100%;
+  background-image: url("/assets/images/homebg.jpg");
+  background-size: 1920px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.best-offer {
+  width: 23%;
+  min-width: 400px;
+  height: 500px;
+  background: #fff;
+  position: relative;
+  padding: 30px;
+  background: #fff;
+}
+.best-offer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  width: 100%;
+  background: yellowgreen;
+}
+.best-offer ul {
+  padding: 0;
+  margin: 0;
+}
+.best-offer ul li {
+  display: block;
+  padding: 20px 0;
+  list-style: none;
+  border-bottom: 1px solid #efefef;
+  margin: 0;
+  position: relative;
+}
+.best-offer ul li .spec {
+  position: absolute;
+  right: 0;
+}
+.best-offer ul li:last-child {
+  border-bottom: none;
+}
+.best-offer h2 {
+  color: rgb(51, 200, 250);
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.best-offer h3 {
+  font-weight: bold;
+}
+.rating,
+.rent-price {
+  margin-bottom: 10px;
+}
+
+.listing {
+  width: 20%;
+  height: 50%;
+  text-align: right;
+  font-weight: 600;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0;
+}
+
+.listing p {
+  flex: 1 1 100%;
+  font-size: 2em;
+  background-color: aliceblue;
+  opacity: 0.9;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+.listing i {
+  color: yellowgreen;
+  margin-right: 10px;
+}
+
+.best-rent {
+  display: flex;
+  align-items: center;
+  background: rgb(233, 232, 232);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.rentBtn {
+  background: rgb(235, 248, 46);
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: blue;
+  line-height: 1;
+}
+.rentBtn:hover {
+  background: salmon;
+  color: white;
+}
+
+.middle {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 45%;
+  height: 300px;
+  background: #fff;
+  position: absolute;
+  bottom: -200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.infomain {
+  color: cadetblue;
+  text-align: center;
+}
+
+.infomain h2 {
+  font-size: 3em;
+  padding: 0;
+  margin: 0;
+}
+.infomain p {
+  padding: 0;
+  margin: 0;
+  font-size: 2em;
+}
+
+.container {
+  padding-top: 300px;
+  margin: 0 auto;
+  height: 115vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4.5em;
+}
+.controler-loop {
+  width: 16%;
+  font-size: 1.3em;
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.controler-loop p {
+  line-height: 1.2;
+}
+.controler-loop span {
+  padding: 5px;
+}
+.controler-loop a {
+  text-decoration: none;
+  color: blue;
+}
+.controler-loop a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.controler-loop h3 {
+  font-size: 1.3em;
+}
+
+.looping-cars {
+  width: 66%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.item-1 {
+  width: 50%;
+  height: 80%;
+}
+.item-1 img {
+  width: 100%;
+  height: auto;
+}
+
+.item-1 h3 a {
+  text-decoration: none;
+  color: rgb(128, 128, 248);
+}
+
+.item-1 i {
+  color: orange;
+}
+
+.rent-action {
+  margin: 20px 0;
+}
+
+.rent-action a {
+  padding: 10px;
+  background: rgb(235, 248, 46);
+  border-radius: 5px;
+  text-decoration: none;
+  color: blue;
+  line-height: 1;
+}
+.rent-action a:hover {
+  background: salmon;
+  color: white;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.item-1 .item-1-contents {
+  padding: 20px;
+  background: #fff;
+}
+.item-1 .item-1-contents h3 {
+  font-size: 18px;
+}
+.item-1 .item-1-contents .rent-price > span {
+  font-size: 1.7rem;
+}
+.item-1 .item-1-contents ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.item-1 .item-1-contents ul li {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #efefef;
+  display: block;
+  position: relative;
+}
+.item-1 .item-1-contents ul li .spec {
+  position: absolute;
+  right: 0;
+}
+.item-1 .item-1-contents ul li:last-child {
+  border-bottom: none;
+}
+.item-1 .item-1-contents .action {
+  margin-top: 20px;
+}
+
+.how-it-works .step {
+  width: 20%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+.how-it-works .step:after {
+  width: 100%;
+  height: 4px;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 25px;
+  background: #007bff;
+}
+.how-it-works .step:last-child:after {
+  display: none;
+}
+.how-it-works .step .number {
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  border: 4px solid #007bff;
+  background: #fff;
+  border-radius: 50%;
+  color: #007bff;
+  display: block;
+  position: relative;
+  margin: 0 auto 10px auto;
+}
+.how-it-works .step .number > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  color: #007bff;
+}
+.how-it-works .step .caption {
+  display: block;
+}
+
+.containerz {
+  width: 60%;
+  height: 60vh;
+  padding-top: 8em;
+  text-align: center;
+  margin: 0 auto;
+  border-top: 3px solid #007bff;
+ 
+}
+
+.containerz h2 {
+  font-size: 3em;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.containerz p {
+  font-size: 1.4em;
+  margin-bottom: 50px;
+}
+
+
+@media (width < 866px) {
+  .listing {
+    display: none;
+  }
+  .middle {
+    display: none;
+  }
+  .containerz {
+    display: none;
+  }
+}

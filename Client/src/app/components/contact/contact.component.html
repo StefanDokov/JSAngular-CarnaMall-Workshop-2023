@@ -1,0 +1,60 @@
+<div class="containercontact">
+    <h2>Contact Us</h2>
+    <p>Here you can find more information about where our car parks are located and all the ways how you can reach us!</p>
+  </div>
+
+
+<div class="contactelements">
+    <h2>Contact Us Or Use This Form To Rent A Car</h2>
+    <p>This form will help you to reach us faster. Our supports are available 24/7. You can call us anytime!</p>
+    <div class="formandside">
+        <div class="formstructure">
+            <form action="#" [formGroup]="postForm">
+              <div class="form-group">
+                <div>
+                  <input type="text" class="form-control" placeholder="First name" formControlName="fname">
+                </div>
+                <div>
+                  <input type="text" class="form-control" placeholder="Last name" formControlName="sname">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div>
+                  <input type="email" class="form-control" placeholder="Email address" formControlName="email">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div>
+                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10" formControlName="descr"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <div>
+                  <input type="submit"  value="Send Message" (click)="onPost()">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="locationinfo">
+            <div>
+              <h3>Contact Info</h3>
+              <ul class="list-unstyled">
+                <li>
+                  <span>Address:</span>
+                  <span>34 Street Name, City Name Here, Bulgaria</span></li>
+                <li><span>Phone:</span><span>+359 288 5321 444</span></li>
+                <li><span>Email:</span><span>isomeone@yahooooo.som</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="mapinfo">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d93836.3793592443!2d23.241546498890138!3d42.69552878948575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sbg!2sbg!4v1688827614062!5m2!1sbg!2sbg" width="300" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    </div>
+
+
+
+
+</div>

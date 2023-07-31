@@ -1,0 +1,45 @@
+.containerfouro {
+    width: 100%;
+    height: 90vh;
+    background-image: url("/assets/images/fourobg.jpg");
+    background-size: cover;
+    background-position: 0 -170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 2em;
+  }
+  
+  .containerfouro h2 {
+    font-size: 4em;
+    text-shadow: 2px 2px #080808;
+  }
+  
+  .containerfouro > p {
+    width: 80%;
+    text-align: center;
+    text-shadow: 2px 2px #080808;
+  }
+
+  .fourobuton {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+  }
+
+  .fourobuton a {
+    padding: 20px;
+    background: gray;
+  }
+
+  .fourobuton a:hover {
+    background: #fff;
+    color: gray;
+    border: 1px solid grey;
+  }

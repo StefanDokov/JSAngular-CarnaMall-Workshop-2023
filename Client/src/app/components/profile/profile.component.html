@@ -1,0 +1,169 @@
+<div class="containerprofile">
+    <h2>Profile</h2>
+    <p>Here you can find information about your profile! You can manage your rents and your posts.</p>
+  </div>
+
+<div class="profilebox">
+    <div class="btnz">
+        <button>Rents</button>
+        <button>Posts</button>
+    </div>
+    <div class="profcontent">
+        <div class="profcard">
+            <div class="containery">
+            <div class="card">
+                <img src="/assets/images/profilepic.jpg">
+                <div class="details">
+                    <h3>Nitin</h3>
+                    <p>Website Developer</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="profposts" *ngIf="postsisShown">
+            <section class="products">
+                <h2>Your Posts</h2>
+                <div class="all-products">
+                    <div class="product">
+                        <img src="/assets/images/profilebg.jpg">
+                        <div class="product-info">
+                            <h4 class="product-title">AirPod 2nd Gen
+                            </h4>
+                            <p class="product-price">$129</p>
+                            <a class="product-btn" href="#">Buy Now</a>
+        
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="/assets/images/profilebg.jpg">
+                        <div class="product-info">
+                            <h4 class="product-title">Apple Watch
+                            </h4>
+                            <p class="product-price">$299</p>
+                            <a class="product-btn" href="#">Buy Now</a>
+        
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="/assets/images/profilebg.jpg">
+                        <div class="product-info">
+                            <h4 class="product-title">iPhone 14
+                            </h4>
+                            <p class="product-price">$999</p>
+                            <a class="product-btn" href="#">Buy Now</a>
+        
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="/assets/images/profilebg.jpg">
+                        <div class="product-info">
+                            <h4 class="product-title">iPan Pro
+                                </h4>
+                            <p class="product-price">$629*</p>
+                            <a class="product-btn" href="#">Buy Now</a>
+        
+                        </div>
+                    </div>
+                    <div class="product">
+                        <img src="/assets/images/profilebg.jpg">
+                        <div class="product-info">
+                            <h4 class="product-title">iPan Pro
+                                </h4>
+                            <p class="product-price">$629*</p>
+                            <a class="product-btn" href="#">Buy Now</a>
+        
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+        </div>
+        <!-- <div class="profrents" > -->
+            <div class="shopping-cart" *ngIf="!postsisShown">
+                <!-- Title -->
+                <div class="title">
+                  My Rents
+                </div>
+               
+                <!-- Product #1 -->
+                <div class="item">
+                  <div class="buttons">
+                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                  </div>
+               
+                  <div class="image">
+                    <img src="/assets/images/profilebg.jpg" alt="pic" />
+                  </div>
+               
+                  <div class="description">
+                    <span>Common Projects</span>
+                    <span>White</span>
+                  </div>
+               
+                  <div class="quantity">
+                    
+                    <input type="text" name="name" value="4 days">
+                    
+                  </div>
+               
+                  <div class="total-price">$549</div>
+                </div>
+                <!-- Product #1 -->
+                <div class="item">
+                  <div class="buttons">
+                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                  </div>
+               
+                  <div class="image">
+                    <img src="/assets/images/profilebg.jpg" alt="pic" />
+                  </div>
+               
+                  <div class="description">
+                    <span>Common Projects</span>
+                    <span>White</span>
+                  </div>
+               
+                  <div class="quantity">
+                    
+                    <input type="text" name="name" value="4 days">
+                    
+                  </div>
+               
+                  <div class="total-price">$549</div>
+                </div>
+                <!-- Product #1 -->
+                <div class="item">
+                  <div class="buttons">
+                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
+                  </div>
+               
+                  <div class="image">
+                    <img src="/assets/images/detailsbg.jpg" alt="pic" />
+                  </div>
+               
+                  <div class="description">
+                    <span>Common Projects</span>
+                    <span>White</span>
+                  </div>
+               
+                  <div class="quantity">
+                    
+                    <input type="text" name="name" value="4 days">
+                    
+                  </div>
+               
+                  <div class="total-price">$549</div>
+                </div>
+               
+                
+              <!-- </div> -->
+        </div>
+
+    </div>
+</div>

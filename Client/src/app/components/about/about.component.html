@@ -1,0 +1,44 @@
+<div class="containerabout">
+    <h2>About Us</h2>
+    <p>Here you can find basic information about our website!</p>
+</div>
+
+<div class="company">
+    <div class="ctext">
+        <h3>Car Company</h3>
+        <p>Our company is created in the summer of 2023! Many othe interesting things has happen since then! Some more text here also!</p>
+        <p>Second part of our text box. Just to fill some space and stuff to be more pleasent for the eye, I hope!</p>
+    </div>
+    <div class="cpic">
+        <img src="/assets/images/aboutcpic.jpg" alt="image">
+    </div>
+</div>
+
+<div class="cteam">
+    <p>Our Team</p>
+    <h3>Meet Our Team</h3>
+    <p>Text and stuff explaining more things about our team and how awesome he is! Best in the whole wild world!</p>
+    <div class="teamlister">
+        <div class="post-entry-1 person-1 avatarcard" *ngFor="let avatar of avatarsList">
+              
+            <img src="{{avatar.image}}" alt="Image">
+        
+          <div class="post-entry-1-contents">
+            <span class="meta">{{avatar.position}}</span>
+            <h2 class="avah">{{avatar.name}}</h2>
+            <p>{{avatar.info}}</p>
+          </div>
+        </div>
+    </div>
+</div>
+
+<div class="reversecompany">
+    <div class="revpic">
+        <img src="/assets/images/revabout.jpg" alt="image">
+    </div>
+    <div class="revtext">
+        <h3>Our Company</h3>
+        <p>Our company is created in the summer of 2023! Many othe interesting things has happen since then! Some more text here also!</p>
+        <p>Second part of our text box. Just to fill some space and stuff to be more pleasent for the eye, I hope!</p>
+    </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="containercarslist">
+    <h2>Our Car Park</h2>
+    <p>Here you can find our list of all available cars. You can pick the one like.</p>
+  </div>
+  <div *ngIf="!isLoaded">
+    Loading...
+    </div>
+  <div class="carsdiv" *ngIf="isLoaded">
+  <div class="carscontainer">
+    <div class="item-1 colrow" *ngFor="let car of carsLister">
+        <a href="#"><img src={{car.image}} alt="Image" class="img-fluid"></a>
+        <div class="item-1-contents">
+          <div class="text-center">
+          <h3><a href="#">{{car.model}}</a></h3>
+          <div class="rating">
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+          </div>
+          <div class="rent-price"><span>${{car.price}}/</span>day</div>
+          </div>
+          <ul class="specs">
+            <li>
+              <span>Doors</span>
+              <span class="spec">{{car.doors}}</span>
+            </li>
+            <li>
+              <span>Seats</span>
+              <span class="spec">{{car.seats}}</span>
+            </li>
+            <li>
+              <span>Transmission</span>
+              <span class="spec">{{car.transmission}}</span>
+            </li>
+            <li>
+              <span>Year</span>
+              <span class="spec">{{car.year}}</span>
+            </li>
+          </ul>
+          <div class="rent-action">
+            <a routerLink="/details/{{car._id}}" class="btn btn-primary">Rent Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

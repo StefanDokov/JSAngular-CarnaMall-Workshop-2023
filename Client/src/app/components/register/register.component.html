@@ -1,0 +1,35 @@
+<div class="containeregister">
+    <h2>Register</h2>
+    <p>Here you can find our register form and create your  new account if you doesn't have one. If you do have one, you can always click on log in button and go to your profile!</p>
+  </div>
+
+  <div class="registerform">
+    
+    <form class="form" [formGroup]="registerForm">
+        <h1><i class="fas fa-user-circle"></i></h1>
+        <div class="form-inner">
+            <div class="space"></div>
+     
+            <input formControlName="username" type="text" placeholder="Username"><br/>
+            <small *ngIf="registerForm.controls['username'].dirty && registerForm.hasError('required','username')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px">Username is required!</small>
+            <div class="space"></div>
+        
+            <input formControlName="email" type="email" placeholder="Email"><br/>
+            <small *ngIf="registerForm.controls['email'].dirty && registerForm.hasError('required','email')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px">Email is required!</small>
+            <div class="space"></div>
+     
+            <input formControlName="password" type="password" placeholder="Password"><br/>
+            <small *ngIf="registerForm.controls['password'].dirty && registerForm.hasError('required','password')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px">Password is required!</small>
+            <div class="space"></div>
+     
+            <input formControlName="rePassword" type="password" placeholder="Repeat Password"><br/>
+            <small *ngIf="registerForm.controls['rePassword'].dirty && registerForm.hasError('required','rePassword')" style="color: red; font-weight: bold; background: white; border-radius: 5px; padding: 2px">Repeat Password is required!</small>
+            <br/>
+            <small *ngIf="registerForm.hasError('passwordmatcherror') && registerForm.controls['rePassword'].dirty && registerForm.controls['password'].dirty" style="color: red; font-weight: bold; background: yellow; border-radius: 5px; padding: 2px">Password missmatch!</small>
+            <button (click)="onRegister()" class="submit-btn">Register</button>
+            <button class="account-btn" routerLink="/login">Log in</button>
+        </div>
+
+     
+      </form>
+  </div>

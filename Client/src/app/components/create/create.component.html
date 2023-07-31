@@ -1,0 +1,23 @@
+<div class="containercreate">
+    <h2>Create a Card</h2>
+    <p>Here you can create a post about the car which you are willing to lease to people with our website's help!</p>
+  </div>
+
+  <div class="backgroundcreate">
+	<div class="containercr">
+		<div class="contact-box">
+			<div class="left"></div>
+			<form class="right" [formGroup]="createForm">
+				<h2>Create a Post</h2>
+				<input formControlName="model" type="text" class="field" placeholder="Model">
+				<input formControlName="image" type="text" class="field" placeholder="imageUrl">
+				<input formControlName="doors" type="text" class="field" placeholder="Doors">
+				<input formControlName="seats" type="text" class="field" placeholder="Seats">
+				<input formControlName="transmission" type="text" class="field" placeholder="Transmission">
+				<input formControlName="price" type="text" class="field" placeholder="Price/Day">
+				<input formControlName="year" type="text" class="field" placeholder="Year">
+				<button class="btn" (click)="onCreateRent()">Post</button>
+			</form>
+		</div>
+	</div>
+</div>

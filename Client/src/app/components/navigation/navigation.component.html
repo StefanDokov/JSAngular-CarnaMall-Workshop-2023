@@ -1,0 +1,19 @@
+<header class="header">
+    <a routerLink="/home" class="logo">CarNaMall</a>
+    <nav class="navbar">
+        <a routerLink="/home">Home</a>
+        <a routerLink="/cars">Cars</a>
+        <a routerLink="/services">Services</a>
+        <a routerLink="/about">About</a>
+        <a routerLink="/contact">Contact</a>
+        <div class="userA" *ngIf="!isLogged">
+            <a routerLink="/register">Register</a>
+            <a routerLink="/login">Login</a>
+        </div>
+        <div class="userB" *ngIf="isLogged">
+            <a routerLink="/create">Create</a>
+            <a routerLink="/profile">Profile</a>
+            <a (click)="logOut()">Logout</a>
+        </div>
+    </nav>
+</header>

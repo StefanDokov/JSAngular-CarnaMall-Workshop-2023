@@ -1,0 +1,26 @@
+<div class="containerdelete">
+    <h2>Delete a Card</h2>
+    <p>Here you can delete yor post about the car which you were willing to lease to people with our website's help!</p>
+  </div>
+  <div *ngIf="!isLoaded">
+	Loading...
+  </div>
+
+<div class="backgroundelete" *ngIf="isLoaded">
+	<div class="containerdel">
+		<div class="contact-box">
+			<div class="left"></div>
+			<form class="right" [formGroup]="deleteForm">
+				<h2>Delete a Post</h2>
+				<input type="text" class="field" placeholder="Model" formControlName="model">
+				<input type="text" class="field" placeholder="imgaeUrl" formControlName="image">
+				<input type="text" class="field" placeholder="Doors" formControlName="doors">
+				<input type="text" class="field" placeholder="Seats" formControlName="seats">
+				<input type="text" class="field" placeholder="Transmission" formControlName="transmission">
+				<input type="text" class="field" placeholder="Price/Day" formControlName="price">
+				<input type="text" class="field" placeholder="Year" formControlName="year">
+				<button class="btn" (click)="onDeleteClick()">Delete</button>
+			</form>
+		</div>
+	</div>
+</div>
