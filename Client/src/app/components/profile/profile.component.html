@@ -2,11 +2,13 @@
     <h2>Profile</h2>
     <p>Here you can find information about your profile! You can manage your rents and your posts.</p>
   </div>
-
-<div class="profilebox">
+  <div *ngIf="!isLoad">
+    Loading...
+    </div>
+<div class="profilebox" *ngIf="isLoad">
     <div class="btnz">
-        <button>Rents</button>
-        <button>Posts</button>
+        <button (click)="changeSections()" [style.backgroundColor]="postsisShown ? 'white' : 'pink'">Rents</button>
+        <button (click)="changeSections()" [style.backgroundColor]="postsisShown ? 'pink' : 'white'">Posts</button>
     </div>
     <div class="profcontent">
         <div class="profcard">
@@ -14,8 +16,8 @@
             <div class="card">
                 <img src="/assets/images/profilepic.jpg">
                 <div class="details">
-                    <h3>Nitin</h3>
-                    <p>Website Developer</p>
+                    <h3>{{theuser.user.username}}</h3>
+                    <p>{{theuser.user.email}}</p>
                     <div class="social-links">
                         <a href="#"><i class="fa-brands fa-facebook"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -30,56 +32,17 @@
             <section class="products">
                 <h2>Your Posts</h2>
                 <div class="all-products">
-                    <div class="product">
-                        <img src="/assets/images/profilebg.jpg">
+                    <div class="product" *ngFor="let rent of rentove">
+                        <img src="{{rent.image}}">
                         <div class="product-info">
-                            <h4 class="product-title">AirPod 2nd Gen
+                            <h4 class="product-title">{{rent.model}}
                             </h4>
-                            <p class="product-price">$129</p>
-                            <a class="product-btn" href="#">Buy Now</a>
+                            <p class="product-price">${{rent.price}}/day</p>
+                            <a class="product-btn" href="#">See Now</a>
         
                         </div>
                     </div>
-                    <div class="product">
-                        <img src="/assets/images/profilebg.jpg">
-                        <div class="product-info">
-                            <h4 class="product-title">Apple Watch
-                            </h4>
-                            <p class="product-price">$299</p>
-                            <a class="product-btn" href="#">Buy Now</a>
-        
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="/assets/images/profilebg.jpg">
-                        <div class="product-info">
-                            <h4 class="product-title">iPhone 14
-                            </h4>
-                            <p class="product-price">$999</p>
-                            <a class="product-btn" href="#">Buy Now</a>
-        
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="/assets/images/profilebg.jpg">
-                        <div class="product-info">
-                            <h4 class="product-title">iPan Pro
-                                </h4>
-                            <p class="product-price">$629*</p>
-                            <a class="product-btn" href="#">Buy Now</a>
-        
-                        </div>
-                    </div>
-                    <div class="product">
-                        <img src="/assets/images/profilebg.jpg">
-                        <div class="product-info">
-                            <h4 class="product-title">iPan Pro
-                                </h4>
-                            <p class="product-price">$629*</p>
-                            <a class="product-btn" href="#">Buy Now</a>
-        
-                        </div>
-                    </div>
+                    
                 </div>
             </section>
         
@@ -92,74 +55,29 @@
                 </div>
                
                 <!-- Product #1 -->
-                <div class="item">
+                <div class="item" *ngFor="let post of theuser.user.userReserves">
                   <div class="buttons">
                     <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
                   </div>
                
                   <div class="image">
-                    <img src="/assets/images/profilebg.jpg" alt="pic" />
+                    <img src="{{post.reserveId.image}}" alt="pic" />
                   </div>
                
                   <div class="description">
-                    <span>Common Projects</span>
-                    <span>White</span>
+                    <span>{{post.reserveId.model}}</span>
+                    <span>${{post.reserveId.price}}/day</span>
                   </div>
                
                   <div class="quantity">
                     
-                    <input type="text" name="name" value="4 days">
+                    <input type="text" name="name" value='{{post.forDays}} days'>
                     
                   </div>
                
-                  <div class="total-price">$549</div>
+                  <div class="total-price">${{post.costPrice}}</div>
                 </div>
-                <!-- Product #1 -->
-                <div class="item">
-                  <div class="buttons">
-                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
-                  </div>
-               
-                  <div class="image">
-                    <img src="/assets/images/profilebg.jpg" alt="pic" />
-                  </div>
-               
-                  <div class="description">
-                    <span>Common Projects</span>
-                    <span>White</span>
-                  </div>
-               
-                  <div class="quantity">
-                    
-                    <input type="text" name="name" value="4 days">
-                    
-                  </div>
-               
-                  <div class="total-price">$549</div>
-                </div>
-                <!-- Product #1 -->
-                <div class="item">
-                  <div class="buttons">
-                    <span class="delete-btn"><i class="fa-solid fa-xmark"></i></span>
-                  </div>
-               
-                  <div class="image">
-                    <img src="/assets/images/detailsbg.jpg" alt="pic" />
-                  </div>
-               
-                  <div class="description">
-                    <span>Common Projects</span>
-                    <span>White</span>
-                  </div>
-               
-                  <div class="quantity">
-                    
-                    <input type="text" name="name" value="4 days">
-                    
-                  </div>
-               
-                  <div class="total-price">$549</div>
-                </div>
+                
                
                 
               <!-- </div> -->

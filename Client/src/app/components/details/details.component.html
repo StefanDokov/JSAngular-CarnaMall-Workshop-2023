@@ -50,8 +50,8 @@
             <div class="reservedbox">
                 <h2>This car has been reserved on the dates that are listed bellow:</h2>
                 
-                <p>14-06-2023 for 4 days</p>
-                <p>14-06-2023 for 4 days</p>
+                <p *ngFor="let post of rent.reserves">{{post?.dateFrom}} for {{post?.forDays}} days by {{post.resOwner.username}}</p>
+                
                 
             </div>
             <div class="rentoform">

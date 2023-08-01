@@ -65,7 +65,7 @@ export class DetailsComponent implements OnInit {
    }
 
    getUseri(){
-    this.auth.user$.subscribe(
+    this.auth.getProfile().subscribe(
       res => this.useri = res
      )  
    }
@@ -84,11 +84,9 @@ export class DetailsComponent implements OnInit {
     const rentId = this.rent._id;
     const update = {...fullObj, reserveId: rentId};
     const updateRent = {...fullObj, resOwner: userId};
-    console.log(updateRent)
     this.auth.infoUpdate(userId, update).subscribe({
       next: (res => {
        
-       console.log(`success`)
       }),
       error: (err) => {
         this.toast.error({detail: 'ERROR', summary: err.message, duration: 5000})

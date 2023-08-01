@@ -32,7 +32,7 @@ export class CreateComponent implements OnInit {
     
 });
 
- this.auth.user$.subscribe(
+ this.auth.getProfile().subscribe(
   value => {
     this.usera = value;
   }
