@@ -23,6 +23,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { AuthenticateComponent } from './components/authenticate/authenticate.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { AuthenticateComponent } from './components/authenticate/authenticate.co
     ReactiveFormsModule,
     HttpClientModule,
     NgToastModule,
+    BrowserAnimationsModule,
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,

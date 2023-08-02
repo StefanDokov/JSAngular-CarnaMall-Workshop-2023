@@ -1,27 +1,27 @@
 <div class="mainscreen">
   <div class="best-offer">
     <h2>BEST OFFER</h2>
-    <h3>Range Rover S7</h3>
+    <h3>{{bestRent?.model}}</h3>
     <ul class="list-unstyled">
       <li>
         <span>Doors</span>
-        <span class="spec">4</span>
+        <span class="spec">{{bestRent?.doors}}</span>
       </li>
       <li>
         <span>Seats</span>
-        <span class="spec">6</span>
+        <span class="spec">{{bestRent?.seats}}</span>
       </li>
       <li>
         <span>Transmission</span>
-        <span class="spec">Automatic</span>
+        <span class="spec">{{bestRent?.transmission}}</span>
       </li>
       <li>
         <span>Year</span>
-        <span class="spec">Automatic</span>
+        <span class="spec">{{bestRent?.year}}</span>
       </li>
     </ul>
     <div class="best-rent">
-      <span>$150/day</span>
+      <span>${{bestRent?.price}}/day</span>
       <a href="contact.html" class="rentBtn">Rent Now</a>
     </div>
   </div>
@@ -55,18 +55,18 @@
     <h3>Our Offer</h3>
     <p>Here you can find some of our most purchased vihicles in our park!</p>
     <p>
-      <a href="#">Previous</a>
+      <a (click)="nextSlide()" >Previous</a>
       <span>/</span>
-      <a href="#">Next</a>
+      <a (click)="prevSlide()">Next</a>
     </p>
   </div>
   <div class="looping-cars">
-
-      <div class="item-1">
-        <a href="#"><img src="/assets/images/homebg.jpg" alt="Image" class="img-fluid"></a>
+      
+    <div class="item-1" *ngFor="let rent of rentsLoop" [ngStyle]="{'transform': 'translateX(' + slideOffset + ')'}">
+        <a href="#"><img src="{{rent.image}}" alt="Image" class="img-fluid"></a>
         <div class="item-1-contents">
           <div class="text-center">
-          <h3><a href="#">Range Rover S64 Coupe</a></h3>
+          <h3><a href="#">{{rent.model}}</a></h3>
           <div class="rating">
             <span><i class="fa-solid fa-star"></i></span>
             <span><i class="fa-solid fa-star"></i></span>
@@ -74,24 +74,24 @@
             <span><i class="fa-solid fa-star"></i></span>
             <span><i class="fa-solid fa-star"></i></span>
           </div>
-          <div class="rent-price"><span>$250/</span>day</div>
+          <div class="rent-price"><span>${{rent.price}}/</span>day</div>
           </div>
           <ul class="specs">
             <li>
               <span>Doors</span>
-              <span class="spec">4</span>
+              <span class="spec">{{rent.doors}}</span>
             </li>
             <li>
               <span>Seats</span>
-              <span class="spec">5</span>
+              <span class="spec">{{rent.seats}}</span>
             </li>
             <li>
               <span>Transmission</span>
-              <span class="spec">Automatic</span>
+              <span class="spec">{{rent.transmission}}</span>
             </li>
             <li>
               <span>Year</span>
-              <span class="spec">2022</span>
+              <span class="spec">{{rent.year}}</span>
             </li>
           </ul>
           <div class="rent-action">
@@ -100,47 +100,10 @@
         </div>
         
       </div>
-
-      <div class="item-1">
-        <a href="#"><img src="/assets/images/homebg.jpg" alt="Image" class="img-fluid"></a>
-        <div class="item-1-contents">
-          <div class="text-center">
-          <h3><a href="#">Range Rover S64 Coupe</a></h3>
-          <div class="rating">
-            <span><i class="fa-solid fa-star"></i></span>
-            <span><i class="fa-solid fa-star"></i></span>
-            <span><i class="fa-solid fa-star"></i></span>
-            <span><i class="fa-solid fa-star"></i></span>
-            <span><i class="fa-solid fa-star"></i></span>
-          </div>
-          <div class="rent-price"><span>$250/</span>day</div>
-          </div>
-          <ul class="specs">
-            <li>
-              <span>Doors</span>
-              <span class="spec">4</span>
-            </li>
-            <li>
-              <span>Seats</span>
-              <span class="spec">5</span>
-            </li>
-            <li>
-              <span>Transmission</span>
-              <span class="spec">Automatic</span>
-            </li>
-            <li>
-              <span>Year</span>
-              <span class="spec">2022</span>
-            </li>
-          </ul>
-          <div class="rent-action">
-            <a href="contact.html" class="btn btn-primary">Rent Now</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
      
+    
+    
+  </div>
 </div>
 
 <div class="containerz">

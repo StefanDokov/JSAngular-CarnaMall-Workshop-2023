@@ -54,6 +54,7 @@
 }
 .best-offer h3 {
   font-weight: bold;
+  text-transform: uppercase;
 }
 .rating,
 .rent-price {
@@ -165,6 +166,7 @@
 .controler-loop a:hover {
   text-decoration: underline;
   color: red;
+  cursor: pointer;
 }
 
 .controler-loop h3 {
@@ -173,20 +175,23 @@
 
 .looping-cars {
   width: 66%;
-  height: 600px;
+  height: 900px;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 1.5em;
+  gap: 2em;
+  padding-bottom: 200px;
 }
 
+
+
 .item-1 {
-  width: 50%;
   height: 80%;
+  flex: 0 0 48%;
 }
 .item-1 img {
   width: 100%;
-  height: auto;
+  height: 300px;
 }
 
 .item-1 h3 a {
@@ -213,6 +218,7 @@
 .rent-action a:hover {
   background: salmon;
   color: white;
+  cursor: pointer;
 }
 
 .text-center {
