@@ -184,6 +184,7 @@
 
 .product:hover img{
 	scale:  1.1;
+	cursor: pointer;
 }
 
 .product:hover {
@@ -313,6 +314,9 @@
 	object-fit: cover;
 	object-position: 50% 50%;
 	border-radius: 10px;
+  }
+  .image img:hover {
+	cursor: pointer;
   }
    
   

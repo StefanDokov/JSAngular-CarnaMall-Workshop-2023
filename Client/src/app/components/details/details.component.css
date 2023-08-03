@@ -183,21 +183,14 @@
   color: white;
 }
 
-.rent-action a:nth-of-type(2) {
-  background-color: rgb(79, 187, 126);
-  color: white;
-}
-.rent-action a:nth-of-type(2):hover {
-  background-color: green;
-  color: black;
-}
 
-.rent-action a:nth-of-type(3) {
+
+.rent-action a:nth-of-type(2) {
   background-color: indianred;
   color: white;
 }
 
-.rent-action a:nth-of-type(3):hover {
+.rent-action a:nth-of-type(2):hover {
   background-color: red;
   color: black;
 }

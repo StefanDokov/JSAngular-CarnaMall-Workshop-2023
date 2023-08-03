@@ -33,12 +33,12 @@
                 <h2>Your Posts</h2>
                 <div class="all-products">
                     <div class="product" *ngFor="let rent of rentove">
-                        <img src="{{rent.image}}">
+                        <img src="{{rent.image}}" routerLink="/details/{{rent._id}}">
                         <div class="product-info">
                             <h4 class="product-title">{{rent.model}}
                             </h4>
                             <p class="product-price">${{rent.price}}/day</p>
-                            <a class="product-btn" href="#">See Now</a>
+                            <a class="product-btn" routerLink="/details/{{rent._id}}">See Now</a>
         
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                   </div>
                
                   <div class="image">
-                    <img src="{{post.reserveId.image}}" alt="pic" />
+                    <img src="{{post.reserveId.image}}" alt="pic" routerLink="/details/{{post.reserveId._id}}"/>
                   </div>
                
                   <div class="description">

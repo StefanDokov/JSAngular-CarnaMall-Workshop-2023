@@ -22,7 +22,7 @@
     </ul>
     <div class="best-rent">
       <span>${{bestRent?.price}}/day</span>
-      <a href="contact.html" class="rentBtn">Rent Now</a>
+      <a routerLink="/details/{{bestRent?._id}}" class="rentBtn">Rent Now</a>
     </div>
   </div>
 
@@ -95,7 +95,7 @@
             </li>
           </ul>
           <div class="rent-action">
-            <a href="contact.html" class="btn btn-primary">Rent Now</a>
+            <a routerLink="/details/{{rent._id}}" class="btn btn-primary">Rent Now</a>
           </div>
         </div>
         
