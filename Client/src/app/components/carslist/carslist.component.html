@@ -8,10 +8,10 @@
   <div class="carsdiv" *ngIf="isLoaded">
   <div class="carscontainer">
     <div class="item-1 colrow" *ngFor="let car of carsLister">
-        <a href="#"><img src={{car.image}} alt="Image" class="img-fluid"></a>
+        <a routerLink="/details/{{car._id}}"><img src={{car.image}} alt="Image" class="img-fluid"></a>
         <div class="item-1-contents">
           <div class="text-center">
-          <h3><a href="#">{{car.model}}</a></h3>
+          <h3><a routerLink="/details/{{car._id}}">{{car.model}}</a></h3>
           <div class="rating">
             <span><i class="fa-solid fa-star"></i></span>
             <span><i class="fa-solid fa-star"></i></span>

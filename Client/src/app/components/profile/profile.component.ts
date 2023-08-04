@@ -58,5 +58,10 @@ getTheUseri(){
      });
     
  }
+ postDel(postId: string, userId: string, rentId: string){
+    console.log(userId)
+    console.log(postId)
+    console.log(rentId)
+ }
 
 }

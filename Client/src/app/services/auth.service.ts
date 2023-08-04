@@ -56,6 +56,10 @@ export class AuthService implements OnDestroy {
     return this.http.post<any>(`${this.baseUrl}/update`,{userId, update});
   }
 
+  delPost(userId: string, infoId: string){
+    return this.http.post(`${this.baseUrl}/delInfo`, {userId, infoId});
+  }
+
   logOut() {
     localStorage.removeItem('token');
     this.user$$.next(undefined);

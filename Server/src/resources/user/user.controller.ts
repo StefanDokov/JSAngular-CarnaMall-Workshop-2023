@@ -101,8 +101,8 @@ class UserController implements Controller {
         next: NextFunction
     ) : Promise<Response | void> => {
         try {
-            const { id, infoId } = req.body;
-            const resu = await this.UserService.delInfo(id, infoId);
+            const { userId, infoId } = req.body;
+            const resu = await this.UserService.delInfo(userId, infoId);
             res.status(200).json({resu});
         } catch (error) {
             return next(new HttpException(404, 'No such user'))

@@ -33,7 +33,8 @@ class RentService {
 
     public async getOneRent(id: string): Promise<Rent> {
           try {
-            const aRent = await this.rents.findById(id);
+            const aRent = await this.rents.findById(id)
+            .populate('reserves.resOwner');
             if(!aRent){
                 throw new Error('No such Rent!')
             }
@@ -83,13 +84,28 @@ class RentService {
         try {
             const renta = await this.rents.findById(rentId);
             if (!renta) {
-                throw new Error ('Unable to find a user with that Email Address')
+                throw new Error ('Unable to find rent with that Address')
             }
             renta.reserves.push(updateRent);
             await renta.save();
             
         } catch (error) {
             throw new Error('Unable to update rent!');
+        }
+    }
+    public async deleteRentOffer(rentId: string,
+        postId: string,
+    ): Promise<string | Error | void> {
+        try {
+            const renta = await this.rents.findById(rentId);
+            if (!renta) {
+                throw new Error ('Unable to find rent with that Address')
+            }
+            renta.reserves = renta.reserves.filter(el => el._id !== postId);
+            await renta.save();
+            
+        } catch (error) {
+            throw new Error('Unable to delete rent!');
         }
     }
 

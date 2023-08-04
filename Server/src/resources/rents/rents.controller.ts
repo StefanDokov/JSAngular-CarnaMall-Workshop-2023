@@ -47,6 +47,11 @@ class RentController implements Controller {
             authenticated,
             this.updateInfo
         );
+        this.router.post(
+            `${this.path}/delInfo`,
+            authenticated,
+            this.deleInfo
+        );
         
     }
     
@@ -127,6 +132,19 @@ class RentController implements Controller {
         try {
             const {rentId, updateRent} = req.body;
             const resu = await this.RentService.updateRentOffer(rentId, updateRent);
+            res.status(200).json({resu});
+        } catch (error) {
+            return next(new HttpException(404, 'Can\'t reach rents'))
+        }
+    }
+    private deleInfo = async (
+        req: Request,
+        res: Response,
+        next: NextFunction
+    ) : Promise<Response | void> => {
+        try {
+            const {rentId, postId} = req.body;
+            const resu = await this.RentService.deleteRentOffer(rentId, postId);
             res.status(200).json({resu});
         } catch (error) {
             return next(new HttpException(404, 'Can\'t reach rents'))
