@@ -57,7 +57,7 @@
                 <!-- Product #1 -->
                 <div class="item" *ngFor="let post of theuser.user.userReserves">
                   <div class="buttons">
-                    <span class="delete-btn" (click)="postDel(post?._id, theuser?.user._id, post.reserveId._id)"><i class="fa-solid fa-xmark"></i></span>
+                    <span class="delete-btn" (click)="postDel(post?._id, theuser?.user._id, post.reserveId._id, post.dateFrom)"><i class="fa-solid fa-xmark"></i></span>
                   </div>
                
                   <div class="image">

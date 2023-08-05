@@ -94,14 +94,14 @@ class RentService {
         }
     }
     public async deleteRentOffer(rentId: string,
-        postId: string,
+        dateFrom: string,
     ): Promise<string | Error | void> {
         try {
             const renta = await this.rents.findById(rentId);
             if (!renta) {
                 throw new Error ('Unable to find rent with that Address')
             }
-            renta.reserves = renta.reserves.filter(el => el._id !== postId);
+            renta.reserves = renta.reserves.filter(el => el.dateFrom != dateFrom);
             await renta.save();
             
         } catch (error) {

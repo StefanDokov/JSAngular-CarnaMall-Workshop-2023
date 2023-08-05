@@ -143,8 +143,8 @@ class RentController implements Controller {
         next: NextFunction
     ) : Promise<Response | void> => {
         try {
-            const {rentId, postId} = req.body;
-            const resu = await this.RentService.deleteRentOffer(rentId, postId);
+            const { rentId, dateFrom }  = req.body;
+            const resu = await this.RentService.deleteRentOffer(rentId, dateFrom);
             res.status(200).json({resu});
         } catch (error) {
             return next(new HttpException(404, 'Can\'t reach rents'))

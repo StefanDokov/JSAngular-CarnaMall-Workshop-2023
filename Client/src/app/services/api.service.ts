@@ -39,7 +39,7 @@ export class ApiService {
   infoPost(rentId: string, updateRent: any){
     return this.http.post<any>(`${this.baseUrl}/rents/${rentId}/link`, {rentId, updateRent});
   }
-  delPost(rentId:string, postId: string){
-    return this.http.post<any>(`${this.baseUrl}/rents/delInfo`, {rentId, postId});
+  delPost(rentId:string, dateFrom: string){
+    return this.http.post<any>(`${this.baseUrl}/rents/delInfo`, {rentId, dateFrom});
   }
 }
