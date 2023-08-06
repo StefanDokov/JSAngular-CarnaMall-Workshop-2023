@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { CraftRent, Rent, Reserve } from '../types/rents';
 
 @Injectable({
   providedIn: 'root'
@@ -16,23 +17,23 @@ export class ApiService {
   }
 
   getRents(){
-    return this.http.get<any[]>(`${this.baseUrl}/rents`);
+    return this.http.get<Rent[]>(`${this.baseUrl}/rents`);
   }
-  createRent(craftObj: any){
+  createRent(craftObj: CraftRent){
       return this.http.post<any>(`${this.baseUrl}/rents/create`, craftObj);
   }
-  getOneRent(id: any){
+  getOneRent(id: string){
     return this.http.get<any>(`${this.baseUrl}/rents/details/${id}`, );
   }
 
-  editRent(id: string, editObj: any){
+  editRent(id: string, editObj: Rent){
     return this.http.post<any>(`${this.baseUrl}/rents/${id}/edit`, editObj)
   }
   deleteRent(id: string) {
     return this.http.delete<any>(`${this.baseUrl}/rents/${id}/delete`);
   }
 
-  makePost(postObj: any){
+  makePost(postObj: Reserve){
     return this.http.post<any>(`${this.baseUrl}/posts`, postObj);
   }
 

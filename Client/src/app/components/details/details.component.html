@@ -41,8 +41,8 @@
               </ul>
               <div class="rent-action" *ngIf="isLogged">
                 <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id != rent.ownerId)" (click)="isRentingClick()">Rent Now</a> 
-                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)">Edit</a>
-                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)">Delete</a>
+                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)" routerLink="/details/{{rent._id}}/edit">Edit</a>
+                <a class="btn btn-primary" *ngIf="isLogged && (useri?.user?._id == rent.ownerId)" routerLink="/details/{{rent._id}}/delete">Delete</a>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Subscription, tap } from 'rxjs';
-import { Profile } from '../types/user';
+import { Login, Profile, User } from '../types/user';
 
 @Injectable({
   providedIn: 'root',
@@ -23,11 +23,11 @@ export class AuthService implements OnDestroy {
     });
   }
 
-  register(userObj: any) {
+  register(userObj: User) {
     return this.http.post<any>(`${this.baseUrl}/register`, userObj).pipe(tap((user) => this.user$$.next(user)));
   }
 
-  login(loginObj: any) {
+  login(loginObj: Login) {
     return this.http.post<any>(`${this.baseUrl}/login`, loginObj).pipe(tap((user) => this.user$$.next(user)));
   }
 
@@ -57,7 +57,7 @@ export class AuthService implements OnDestroy {
   }
 
   delPost(userId: string, infoId: string){
-    return this.http.post(`${this.baseUrl}/delInfo`, {userId, infoId});
+    return this.http.post<any>(`${this.baseUrl}/delInfo`, {userId, infoId});
   }
 
   logOut() {
