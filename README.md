@@ -57,37 +57,37 @@ The front end is written in Angular.
 # Screenshots
 
 ### Home page 
-<img src="Screenshots/homepage.png" alt="Home page" width="800">
+<img src="Screenshots/homepage.jpg" alt="Home page" width="800">
 
 \
 &nbsp;
 ### Cars list
-<img src="Screenshots/carspage.png" alt="Cars list" width="800">
+<img src="Screenshots/carspage.jpg" alt="Cars list" width="800">
 
 \
 &nbsp;
 ### Details page
-<img src="Screenshots/detailspage.png" alt="Details page" width="800">
+<img src="Screenshots/detailspage.jpg" alt="Details page" width="800">
 
 \
 &nbsp;
 ### Profile
-<img src="Screenshots/profilepage.png" alt="Filter by category" width="800">
+<img src="Screenshots/profilepage.jpg" alt="Filter by category" width="800">
 
 \
 &nbsp;
 ### Create user
-<img src="Screenshots/registerpage.png" alt="Create user" width="800">
+<img src="Screenshots/registerpage.jpg" alt="Create user" width="800">
 
 \
 &nbsp;
 ### Create-Edit Rents
-<img src="Screenshots/editpage.png" alt="Create-Edit Forms" width="800">
+<img src="Screenshots/editpage.jpg" alt="Create-Edit Forms" width="800">
 
 \
 &nbsp;
 ### Delete Form
-<img src="Screenshots/deletepage.png" alt="Delete confirm" width="800">
+<img src="Screenshots/deletepage.jpg" alt="Delete confirm" width="800">
 
 \
 &nbsp;
