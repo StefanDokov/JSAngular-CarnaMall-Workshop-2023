@@ -56,27 +56,27 @@ The front end is written in Angular.
 
 # Screenshots
 
-### Home page 
+### Home Page 
 <img src="Screenshots/homepage.jpg" alt="Home page" width="800">
 
 \
 &nbsp;
-### Cars list
+### Cars List
 <img src="Screenshots/carspage.jpg" alt="Cars list" width="800">
 
 \
 &nbsp;
-### Details page
+### Details Page
 <img src="Screenshots/detailspage.jpg" alt="Details page" width="800">
 
 \
 &nbsp;
-### Profile
+### Profile Page
 <img src="Screenshots/profilepage.jpg" alt="Filter by category" width="800">
 
 \
 &nbsp;
-### Create user
+### Create User
 <img src="Screenshots/registerpage.jpg" alt="Create user" width="800">
 
 \
