@@ -16,7 +16,7 @@ The front end is written in Angular.
 2. Run `npm install` in both the `Client` and `Server` folders
 3. Run `npm run dev` in the `Server` folder for a dev server. Navigate to `http://localhost:5050/`.
    Must fill .env.example (Rename it to .env) file before starting the Server. I am using MongoDB Atlas for the project.
-5. Run `ng serve` in a dev server's `Client` folder. Navigate to `http://localhost:4200/`.
+5. Run `ng serve` in the `Client` folder for a client to start running. Navigate to `http://localhost:4200/`.
 
 \
 &nbsp;
