@@ -19,7 +19,13 @@ export class RegisterComponent implements OnInit{
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router,
     private toast: NgToastService){}
 
+  isLogged: string | null = this.auth.getToken();
   ngOnInit(): void {
+
+    if (this.isLogged != null) {
+      this.router.navigate(['home']);
+    }
+    
     this.registerForm = this.fb.group({
       email: ['', Validators.required],
       username: ['', Validators.required],
@@ -42,7 +48,7 @@ export class RegisterComponent implements OnInit{
           this.router.navigate(['cars']);
         }),
         error: (err) => {
-          this.toast.error({detail: 'ERROR', summary: err.error.errors[0], duration: 5000})
+          // this.toast.error({detail: 'ERROR', summary: err.error.errors[0], duration: 5000})
           
         }
       });

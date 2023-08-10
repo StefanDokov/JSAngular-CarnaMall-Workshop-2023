@@ -43,6 +43,9 @@
     font-weight: 600;
     cursor: default;
 }
+.logo:hover {
+    cursor: pointer;
+}
 .navbar {
     display: flex;
 }

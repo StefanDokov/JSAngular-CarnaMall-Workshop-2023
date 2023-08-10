@@ -70,8 +70,8 @@ getTheUseri(){
   })
   
   
-    this.toast.success({
-      detail: 'SUCCESS',
+    this.toast.warning({
+      detail: 'REMOVED',
       summary: 'Reservation Canceled!',
       duration: 5000,
     });

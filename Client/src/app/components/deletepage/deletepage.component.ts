@@ -86,7 +86,7 @@ export class DeletepageComponent implements OnInit{
     const {id} = this.activeRoute.snapshot.params;
     this.api.deleteRent(id).subscribe({
       next: (res => {
-        this.toast.success({detail: 'SUCCESS', summary: res.message, duration: 5000})
+        this.toast.error({detail: 'REMOVED', summary: res.message, duration: 5000})
        this.router.navigate(['cars']);
       }),
       error: (err) => {

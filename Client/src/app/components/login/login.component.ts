@@ -17,8 +17,11 @@ export class LoginComponent implements OnInit {
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router,
     private toast: NgToastService){}
 
-
+  isLogged: string | null = this.auth.getToken();
   ngOnInit(): void {
+    if (this.isLogged != null) {
+      this.router.navigate(['home']);
+    }
     this.loginForm = this.fb.group({
         email: ['', Validators.required],
         password: ['', Validators.required],
@@ -36,7 +39,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['cars']);
         },
         error:(err) => {
-          this.toast.error({detail: "ERROR", summary: err.error.errors? err.error.errors[0] : err.error.message ,duration: 5000});
+          // this.toast.error({detail: "ERROR", summary: err.message,duration: 5000});
           
         }
 
