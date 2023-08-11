@@ -33,7 +33,7 @@ export class TokenInterceptor implements HttpInterceptor {
           } else {
             const wrongs = {...err};
             console.log(wrongs)
-            this.toast.error({detail: "Error", summary: wrongs?.error?.errors? wrongs?.error?.errors : wrongs?.error?.message, duration: 5000});
+            this.toast.error({detail: "Error", summary: wrongs?.error?.errors? wrongs?.error?.errors[0] : wrongs?.error?.message, duration: 5000});
 
           }
           

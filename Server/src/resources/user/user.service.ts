@@ -1,7 +1,6 @@
 
 import UserModel from "./user.model";
 import token from "@/utils/token";
-import User  from "./user.interface";
 import Ureserve from "./user.interface";
 
 class UserService {
@@ -26,8 +25,8 @@ class UserService {
             
             const accessToken = token.createToken(user);
             return accessToken;
-        } catch (error) {
-            throw new Error('Unable to create user');
+        } catch (error: any) {
+            throw new Error(error.message);
         }
     }
 
@@ -48,8 +47,8 @@ class UserService {
             } else {
                 throw new Error('Wrong credentials given');
             }
-        } catch (error: any) {
-            throw new Error(error.message);
+        } catch (err: any) {
+            throw new Error(err.message);
         }
     }
 
