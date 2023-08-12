@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit{
  autoplayInterval = 5000;
  bestRent: any = undefined;
  rentsLoop:any = [];
+ timer: any;
 
   constructor(private auth: AuthService, private api: ApiService) {
 
@@ -60,13 +61,17 @@ export class HomeComponent implements OnInit{
    
 
   nextSlide() {
+    clearInterval(this.timer);
     this.currentIndex = (this.currentIndex + 1) % this.rents.length;
     this.updateSlideOffset();
+    this.startAutoplay();
   }
 
   prevSlide() {
+    clearInterval(this.timer)
     this.currentIndex = this.currentIndex > 0 ? this.currentIndex - 1 : this.rents.length - 1;
     this.updateSlideOffset();
+    this.startAutoplay();
   }
 
   
@@ -74,7 +79,7 @@ export class HomeComponent implements OnInit{
     this.slideOffset = `-${this.currentIndex * 106.5}%`;
   }
   startAutoplay() {
-    setInterval(() => {
+    this.timer = setInterval(() => {
       this.nextSlide();
     }, this.autoplayInterval);
   }
